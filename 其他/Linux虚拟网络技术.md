@@ -1,3 +1,10 @@
+---
+layout: post
+title: Github 博客画流程图
+category: how2blog
+tags: [tools, study, markdown]
+mermaid: true
+---
 # Linux虚拟网络技术
 ## Network Namespace
 Network Namespace是Linux内核提供的实现网络虚拟化的重要功能，他能创建多个隔离的网络空间，他们有独自的网络栈信息，运行时仿佛自己都在独立的网络中。不同的Network Namespace资源互不可见，彼此之间无法通信。
