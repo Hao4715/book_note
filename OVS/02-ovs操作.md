@@ -26,7 +26,7 @@ dl_dst=7e:ff:00:03:08:00
 
 ## 实验规则
 
-* `ovs-ofctl add-flow xiang priority=1000,dl_dst=00:00:08:00:45:00/00:00:ff:ff:ff:ff,actions=mod_dl_dst:a6:eb:2c:10:6d:88,normal`
+* `ovs-ofctl add-flow xiang priority=1000,dl_dst=00:00:08:00:45:00/00:00:ff:ff:ff:ff,actions=output:`
 * `ovs-ofctl add-flow xiang priority=100,ip,nw_src=172.16.18.135,actions=mod_dl_dst:d6:ba:25:dd:64:a8,mod_nw_dst:172.20.0.3,normal`
 * `ovs-ofctl add-flow xiang priority=0,actions=NORMAL`
 
