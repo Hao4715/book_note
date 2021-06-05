@@ -15,10 +15,9 @@
 
    * `yum install mock`:安装mock
 * `useradd -s /sbin/nologin mockbuild`：根据报错中提示的user创建。
-  
 2. 再重新执行rpm命令。
 
-3. 安装依赖包：`yum install rpm-build redhat-rpm-config asciidoc hmaccalc perl-ExtUtils-Embed pesign xmlto audit-libs-devel binutils-devel elfutils-devel elfutils-libelf-devel java-devel ncurses-devel newt-devel numactl-devel pciutils-devel python-devel zlib-devel`
+3. 安装依赖包：`yum install bison gcc rpm-build redhat-rpm-config asciidoc hmaccalc perl-ExtUtils-Embed pesign xmlto audit-libs-devel binutils-devel elfutils-devel elfutils-libelf-devel java-devel ncurses-devel newt-devel numactl-devel pciutils-devel python-devel zlib-devel`
 
 4. 回到根目录，进入rpmbuild目录中的SPECS目录中，执行`rpmbuild`命令。
 
@@ -103,16 +102,16 @@
    进入源码目录编译：
 
    ```shell
-   cd /root/rpmbuild/BUILD/kernel-3.10.0-327.el7/linux-3.10.0-327.el7.x86_64
+   cd /root/rpmbuild/BUILD/kernel-3.10.0-957.el7/linux-3.10.0-957.el7.x86_64
    make
    ```
 
 7. 修改内核源码，修改内核源码后需要重新编译源码生成新的内核。
 
-   1. `cd /root/rpmbuild/BUILD/kernel-3.10.0-327.el7/linux-3.10.0-327.el7.x86_64`
+   1. `cd /root/rpmbuild/BUILD/kernel-3.10.0-957.el7/linux-3.10.0-957.el7.x86_64`
    2. `make menuconfig`,没特殊要求，直接退出即可
    3. `make`编译，耗时久
-   4. 安装：`make modules+install`，`make install`
+   4. 安装：`make modules_install`，`make install`
    5. 更新引导文件：`grub2-mkconfig -o /boot/grub2/grub.cfg`
 
 ## 模块简单使用

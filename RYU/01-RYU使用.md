@@ -59,7 +59,7 @@ class L2Switch(app_manager.RyuApp):
 ## ryu连接远程ovs
 
 * 设置ovs远程连接的目的IP以及port：`ovs-vsctl set-controller xiang tcp:192.168.103.87:6666`。
-* 修改ryu监听端口
+* 修改ryu监听端口的两种方式：
   1. 修改ryu/ryu/ofproto/ofproto_common.py 文件中的`OFP_TCP_PORT`项。
   2. 通过命令行指定监听端口：`ryu-manager --ofp-tcp-listen-port   6666  --verbose  simple_switch_13.py`
 * 启动ryu控制器，可以通过`netstat -lnpt`查看监控端口情况。

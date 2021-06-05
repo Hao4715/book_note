@@ -21,6 +21,10 @@
   * 查看：`ovs-vsctl get bridge xiang stp_enable`
   * 关闭：`ovs-vsctl set bridge xiang stp_enable=false`
   * 设置时间：`ovs−vsctl set Bridge br0 other_config:rstp-ageing-time=1000`
+* 为网桥设置设置IP：`ifconfig xhw 172.25.0.254/24 up`
+* 为容器设置网关：`route add default gw 172.25.0.254`
+* 设置ovs vxlan 端口：` ovs-vsctl add-port br0 vxlan1 -- set interface vxlan1 type=vxlan options:remote_ip=10.0.0.1 options:local_ip=10.0.0.2 option:key=671745`
+* 修改ovs vxlan端口vni：`ovs-vsctl set interface "port0" option:key=456704`
 
 dl_dst=7e:ff:00:03:08:00
 

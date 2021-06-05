@@ -88,4 +88,8 @@
 ### 从容器内拷贝文件到主机上
 `docker cp 容器ID:容器内路径 目的主机路径`
 ### 制作镜像
-`docker commit -a="author" -m="message" 容器ID uno/newContainer:2.2` ： 会在本地生成一个新版本的镜像。
+`docker commit -a="author" -m="message" 容器ID uno/newContainer:2.2` ： 会在本地生成一个新版本的镜
+
+### 查看docker网络信息
+
+`docker network ls`
